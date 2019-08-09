@@ -14,7 +14,8 @@ repositories {
 }
 
 dependencies {
-	compileOnly('org.projectlombok:lombok')
+	annotationProcessor("org.projectlombok:lombok:1.16.20")
+	compileOnly 'org.projectlombok:lombok:1.16.20'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
