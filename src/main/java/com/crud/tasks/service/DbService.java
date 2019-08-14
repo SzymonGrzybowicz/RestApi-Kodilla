@@ -18,7 +18,7 @@ public class DbService {
         return taskRepository.findAll();
     }
 
-    public Task saveTask(final Task task){
+    public Task saveTask(final Task task) {
         return taskRepository.save(task);
     }
 
@@ -27,6 +27,6 @@ public class DbService {
     }
 
     public void deleteTask(final Long id) {
-            taskRepository.deleteById(id);
+        taskRepository.deleteById(id);
     }
 }
