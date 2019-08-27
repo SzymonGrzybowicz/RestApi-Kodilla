@@ -25,8 +25,8 @@ public class TrelloController {
 
     private void printTrelloBoards(List<TrelloBoardDto> list){
         list.stream()
-                .filter(n -> n.getName().toLowerCase().contains("kodilla"))
-                .filter(n -> !n.getId().isEmpty())
+                .filter(n -> n!= null && n.getName().toLowerCase().contains("kodilla"))
+                .filter(n -> n!= null && !n.getId().isEmpty())
                 .forEach(n-> System.out.println("Id: " + n.getId() + "name: " + n.getName()));
     }
 }
