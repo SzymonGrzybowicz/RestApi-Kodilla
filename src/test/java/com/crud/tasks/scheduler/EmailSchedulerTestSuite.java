@@ -32,6 +32,6 @@ public class EmailSchedulerTestSuite {
         //When
         emailScheduler.sentInformationEmail();
         //Then
-        Mockito.verify(simpleEmailService).send(Mockito.any());
+        Mockito.verify(simpleEmailService).sendDailyMail(Mockito.any());
     }
 }

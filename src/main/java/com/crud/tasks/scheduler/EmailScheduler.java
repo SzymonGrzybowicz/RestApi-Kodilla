@@ -26,7 +26,7 @@ public class EmailScheduler {
     public void sentInformationEmail(){
         long size = taskRepository.count();
         String sentenceEnding = size == 1 ? "task" : "tasks";
-        simpleEmailService.send(new Mail(
+        simpleEmailService.sendDailyMail(new Mail(
                 adminConfig.getAdminMail(),
                 SUBJECT,
                 "Currently in database you got: " + size + " " + sentenceEnding,
